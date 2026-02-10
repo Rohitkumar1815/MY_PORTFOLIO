@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | Fresher Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">My Portfolio</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#documents" class="nav-link">Documents</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm a Fresher Developer</h1>
+            <p class="hero-subtitle">Building amazing things with code and creativity</p>
+            <button class="cta-button">Get In Touch</button>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-box"></div>
+            <div class="floating-circle"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My name is Rohit Kumar and I am a B.Tech student in Artificial Intelligence & Machine Learning with basic knowledge and  experience in Python, Artificial Intelligence, Machine Learning, Data Analysis, and Web Development.</p>
+                    <p>Built demo AI and ML projects including face recognition systems and predictive models. Seeking an internship in Data Science, AI/ML, Software Development,
+                       or Analytics to apply technical skills and problem-solving abilities to gain knowledge and experience.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Projects</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Dedication</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Frontend Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Backend Development</h3>
+                    <p>Python, MySQL</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Technologies</h3>
+                    <p>Jupyter Notebook, VS Code, Artificial Intelligence, Machine Learning</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Libraries</h3>
+                    <p>NumPy, Pandas, Scikit-learn,</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Other</h3>
+                    <p>Prompt Engeenering, Automation(n8n)</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 90%"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Soft Skills</h3>
+                    <p>Communication, Teamwork, Adaptablity, Quick Learner</p>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="documents">
+        <div class="container">
+            <h2 class="section-title">My Documents</h2>
+            
+            <div class="documents-content">
+                <!-- Upload Area -->
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload Your Documents</h3>
+                        <p>Drag and drop your files here or click to browse</p>
+                        <p class="upload-hint">PDF, DOC, DOCX, XLS, XLSX, PNG, JPG (Max 5MB)</p>
+                        <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg" hidden>
+                        <button class="upload-button" id="uploadBtn">Choose Files</button>
+                    </div>
+                </div>
+
+                <!-- Documents List -->
+                <div class="documents-list" id="documentsList">
+                    <div class="empty-state">
+                        <i class="fas fa-folder-open"></i>
+                        <p>No documents uploaded yet</p>
+                        <small>Upload your resume, marksheet, certificates, and more!</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Store</h3>
+                    <p>A fully functional e-commerce platform with product listings, cart functionality, and payment integration.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Javascript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://rohitkumar1815.github.io/E-commerce-Website" target="_blank" class="project-link">View Project</a>
+                        <a href="https://github.com/Rohitkumar1815/E-commerce-Website" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>MY Portfolio</h3>
+                    <p>A personal portfolio website built to showcase projects, technical skills, education, and contact information in a structured and professional format.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://rohitkumar1815.github.io/My-Portfolio" target="_blank" class="project-link">View Project</a>
+                        <a href="https://github.com/Rohitkumar1815/My-Portfolio" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Web Application </h3>
+                    <p>A browser-based application developed using HTML, CSS, and JavaScript to provide interactive user interfaces and dynamic functionality without requiring installation.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">Javascript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Rohitkumar1815/Webpage-login" target="_blank" class="project-link">View Project</a>
+                        <a href="https://github.com/Rohitkumar1815/Webpage-login" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Learning Platform</h3>
+                    <p>Built a role-based learning platform with separate dashboards for admin, teacher, and student roles, enabling secure authentication, controlled access, and structured online learning.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML, CSS, Javascript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Project</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Movie Finder</h3>
+                    <p>Search and discover movies with detailed information, ratings, and recommendations powered by APIs.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TMDB API</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Project</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Role Based Login Page</h3>
+                    <p>Developed a role-based login system that authenticates users and redirects them to dashboards based on assigned roles, ensuring secure and controlled access.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML, CSS, Javascript</span>
+                        <span class="tag">Python</span>
+                        
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="project-link">View Project</a>
+                        <a href="#" target="_blank" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">I'd love to hear from you! Let's connect and create something amazing together.</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Your Name" required class="form-input">
+                    <input type="email" placeholder="Your Email" required class="form-input">
+                    <input type="text" placeholder="Subject" required class="form-input">
+                    <textarea placeholder="Your Message" rows="6" required class="form-input"></textarea>
+                    <button type="submit" class="form-button">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rohitkanoujiya1815@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 8810322637</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Ghaziabad, Uttar Pradesh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Rohitkumar1815" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/rohit-kumar-48626928b" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/rohitkanoujiya1815?igsh=dHihaHBscGJ3cXU4" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <p>Designed & Built by ROHIT</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
